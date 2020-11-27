@@ -4,9 +4,14 @@
     max-width: 1680px;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1, h2, h3{
     font-family: 'Londrina Solid', cursive;
     margin: 0;
+    font-weight: 400;
 }
 
 h1{
@@ -15,11 +20,11 @@ h1{
 
 h2{
     font-size: 2.65em;
-    max-width: 430px;
 }
 
 h3{
     font-size: 2em;
+    max-width: 500px;
 }
 
 h4{
@@ -61,6 +66,7 @@ p{
     display: grid;
     justify-content: center;
     align-items: center;
+    grid-row-gap: 0;
 }
 
 #hero h1{
@@ -73,3 +79,69 @@ p{
     max-width: 1120px;
 }
 
+#categories{
+    display: grid;
+    justify-content: center;
+    margin-top: 136px;
+}
+
+.grid-category{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2em;
+    max-width: 800px;
+}
+
+#categories .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 88px 128px;
+    background-size: cover;
+    background-position: center;
+}
+
+#categories a{
+    color: #fdfdfd;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.fruit{
+    background-image: url('../img/placeholder_500x300.png');
+}
+.veggies{
+    background-image: url('../img/placeholder_500x300.png');
+}
+.meat{
+    background-image: url('../img/placeholder_500x300.png');
+}
+.dairy{
+    background-image: url('../img/placeholder_500x300.png');
+}
+.eggs{
+    background-image: url('../img/placeholder_500x300.png');
+}
+.honey{
+    background-image: url('../img/placeholder_500x300.png');
+}
+
+#story{
+    margin: 136px 0;
+}
+
+#story h2{
+    text-align: center;
+}
+
+#story p{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+#story .btn{
+    max-width: 500px;
+    margin: 48px auto;
+    display: block
+}
