@@ -1,0 +1,75 @@
+/*Global styles*/
+.container{
+    margin: 0 7.5em;
+    max-width: 1680px;
+}
+
+h1, h2, h3{
+    font-family: 'Londrina Solid', cursive;
+    margin: 0;
+}
+
+h1{
+    font-size: 5.75em;
+}
+
+h2{
+    font-size: 2.65em;
+    max-width: 430px;
+}
+
+h3{
+    font-size: 2em;
+}
+
+h4{
+    font-size: 1.25em;
+}
+
+p{
+    font-size: 1em;
+}
+
+.dark{
+    color: #212121 !important;
+}
+
+.white{
+    color: #fdfdfd !important;
+}
+
+.grey{
+    color: #d3d3d3 !important;
+}
+
+.mokka{
+    color: #d7a56a !important;
+}
+
+.olive{
+    color: #9c8e61 !important;
+}
+
+.sun{
+    color: #f29722 !important;
+}
+
+/*Homepage*/
+#hero{
+    background:  #9c8e61;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h1{
+    line-height: 0;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+    max-width: 1120px;
+}
+
