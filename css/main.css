@@ -23,11 +23,13 @@
 
 html {
   color: #212121;
-  font-size: 18px;
   line-height: 1.4;
   font-family: 'Montserrat' sans-serif;
 }
 
+body {
+  font-size: 16px;
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -272,4 +274,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
