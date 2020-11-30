@@ -12,7 +12,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-   @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Montserrat:wght@300;400;700&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Montserrat:wght@300;400;500;700&display=swap');
 *,
 ::before,
 ::after{
@@ -23,13 +23,15 @@
 
 html {
   color: #212121;
-  line-height: 1.4;
-  font-family: 'Montserrat' sans-serif;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   background: #d7a56a url(../img/noisy_color.png) repeat 0 0;
   font-size: 16px;
+  line-height: 1.4;
+
 }
 
 /*

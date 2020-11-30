@@ -1,4 +1,7 @@
-/*Global styles*/
+
+/*
+Global styles
+*/
 .container{
     margin: 0 auto;
     padding: 0 7.5em;
@@ -7,7 +10,12 @@
 
 a{
     text-decoration: none;
+    transition: 0.5 all-ease;
 }
+
+/*
+Global styles - Typography
+*/
 
 h1, h2, h3{
     font-family: 'Londrina Solid', cursive;
@@ -20,7 +28,9 @@ h1{
 }
 
 h2{
-    font-size: 2.65rem;
+    font-size: 5.75rem;
+    margin-bottom: 5rem;
+    text-align: center;
 }
 
 h3{
@@ -34,11 +44,47 @@ h4{
 
 p{
     font-size: 1.125rem;
+    line-height: 1.7;
+    font-weight: 500;
+    max-width: 800px;
+    padding: 0 3rem 3rem;
+}
+
+
+/*
+Global styles - Buttons
+*/
+
+.btn {
+  padding: 32px 48px;
+  line-height: 0;
+  text-transform: uppercase;
+  letter-spacing: .144em;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  .
+}
+
+.btn_primary {
+  background: #f29722;
+  color: #fdfdfd;
+}
+
+.btn_primary:hover {
+  background: #9c8e61;
 }
 
 .dark{
     color: #212121 !important;
 }
+
+
+/*
+Global styles - Colors
+*/
 
 .white{
     color: #fdfdfd !important;
@@ -171,8 +217,8 @@ p{
     background-image: url('../img/placeholder_500x300.png');
 }
 
-#story{
-    margin: 136px 0;
+#story, #recipes{
+    padding: 176px 0;
 }
 
 #story h2{
@@ -180,13 +226,23 @@ p{
 }
 
 #story p{
-    max-width: 800px;
     margin: 0 auto;
-    padding: 0 3em;
+
 }
 
 #story .btn{
     max-width: 500px;
     margin: 48px auto;
     display: block
+}
+
+
+#recipes {
+  background: #fdfdfd;
+}
+
+#recipes .recipe-filter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
 }
