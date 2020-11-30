@@ -106,6 +106,7 @@ Global styles - Colors
     color: #f29722 !important;
 }
 
+
 /*Homepage*/
 #hero{
   position: relative;
@@ -173,7 +174,9 @@ Global styles - Colors
 #categories{
     display: grid;
     justify-content: center;
-    margin-top: 136px;
+    margin-top: -136px;
+    position: relative;
+    z-index: 1500;
 }
 
 .grid-category{
@@ -190,6 +193,7 @@ Global styles - Colors
     padding: 88px 128px;
     background-size: cover;
     background-position: center;
+    border-radius: 20px;
 }
 
 #categories a{
@@ -198,23 +202,42 @@ Global styles - Colors
     font-weight: 400;
 }
 
+
 .fruit{
-    background-image: url('../img/placeholder_500x300.png');
+    background-image: url('../img/fruit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .veggies{
-    background-image: url('../img/placeholder_500x300.png');
+    background-image: url('../img/veggies.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .meat{
-    background-image: url('../img/placeholder_500x300.png');
+    background-image: url('../img/meats.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .dairy{
-    background-image: url('../img/placeholder_500x300.png');
+    background-image: url('../img/dairy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .eggs{
-    background-image: url('../img/placeholder_500x300.png');
+    background-image: url('../img/eggs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .honey{
-    background-image: url('../img/placeholder_500x300.png');
+    background-image: url('../img/honey.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 #story, #recipes{
