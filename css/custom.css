@@ -50,6 +50,10 @@ p{
     padding: 0 3rem 3rem;
 }
 
+.label{
+    font-size: .8rem !important;
+}
+
 
 /*
 Global styles - Buttons
@@ -267,6 +271,49 @@ Global styles - Colors
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
+}
+
+/*store page*/
+#store{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+    z-index: 1500;
+}
+
+#store-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 2em;
+}
+
+#store img{
+    width: 250px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.storeCard{
+    text-align: center;
+    max-width: 250px;
+}
+
+.storeCard .storeCat{
+    width: 200px;
+    height: 48px;
+    background: #f29722;
+    border-radius: 20px 20px 0 0;
+    margin: 0 auto;
+    font-size: .8rem;
+    padding-top: 12px;
+}
+
+.storeCard .addToBasket{
+    width: 200px;
+    background: #f29722;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
 }
 
 /*Footer*/
