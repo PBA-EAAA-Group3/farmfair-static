@@ -38,6 +38,11 @@ h3{
     max-width: 500px;
 }
 
+h3.small{
+    font-size: 1.02rem;
+    letter-spacing: 0.5px;
+}
+
 h4{
     font-size: 1.25rem;
 }
@@ -297,6 +302,7 @@ Global styles - Colors
 .storeCard{
     text-align: center;
     max-width: 250px;
+    display: block;
 }
 
 .storeCard .storeCat{
@@ -314,7 +320,41 @@ Global styles - Colors
     background: #f29722;
     border-radius: 0 0 20px 20px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 }
+
+.addToBasket h3{
+    grid-column-start: span 4;
+    padding-top: 15px;
+    margin: 0 0 -20px 0;
+}
+
+.addToBasket .quantity{
+    grid-column: 2/3;
+    justify-content: center;
+    padding: 3px;
+    margin: 25px 0 20px 0;
+    border-radius: 10px 0 0 10px;
+    text-align: right;
+}
+
+
+.addToBasket .addButton{
+    border-radius: 0 10px 10px 0;
+    padding: 6px;
+    text-align: right;
+    margin: 25px 0 20px 0;
+    border: none;
+    color: #fdfdfd;
+    background-color: #9c8e61;
+}
+
+.addToBasket input[type=number]{
+    border: none;
+}
+
 
 /*Footer*/
 footer{
