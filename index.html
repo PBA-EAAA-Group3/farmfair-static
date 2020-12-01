@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/custom.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -25,35 +26,64 @@
 <body>
   <header></header>
   <div id="hero">
-    <h1 class="heading">FarmFair</h1>
-    <p class="description">loremipsum</p>
+    <div class="video-container">
+      <video loop src="img/cottonbro.mp4" autoplay poster="img/cottenbro.jpg"></video>
+    </div>
+    <div class="pageHeading">
+      <h1><img class="logo" src="img/farmfair-logo1.svg" alt="farmfair"></h1>
+      <h3 class="description">Get fresh excess produce and meats directly from the farm</h3>
+    </div>
+
   </div>
+  <div class="gradSectionSolid"></div>
   <section id="categories">
     <div class="grid-category">
       <a href="#" id="">
-        <span class="card">
+        <span class="card fruit">
           <h3>Fruit</h3>
         </span>
       </a>
       <a href="#" id="">
-        <span class="card">
+        <span class="card veggies">
           <h3>Veggies</h3>
         </span>
       </a>
       <a href="#" id="">
-        <span class="card">
-          <h3>From Animals</h3>
+        <span class="card dairy">
+          <h3>Dairy</h3>
+        </span>
+      </a>
+      <a href="#" id="">
+        <span class="card meat">
+          <h3>Meat</h3>
+        </span>
+      </a>
+      <a href="#" id="">
+        <span class="card honey">
+          <h3>Honey</h3>
+        </span>
+      </a>
+      <a href="#" id="">
+        <span class="card eggs">
+          <h3>Eggs</h3>
         </span>
       </a>
     </div>
   </section>
   <section id="story">
     <h2>Our Story</h2>
-    <p>Lorem ipsum</p>
-    <button class="btn">Read more</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae itaque amet nesciunt, rem cumque sit officia blanditiis, pariatur ipsa doloremque sequi quo esse iste repudiandae! Exercitationem ipsam fugit et unde, quaerat impedit totam maxime. Quae quibusdam quisquam quaerat deleniti ab, doloribus dolor accusamus aperiam quod perspiciatis aliquam possimus ipsa, ea nesciunt recusandae! Animi voluptatem eos adipisci similique temporibus saepe voluptas libero illo nesciunt architecto? Magni eligendi maiores voluptatibus.</p>
+    <button href="#" class="btn btn_primary">Read more</button>
   </section>
-  <section id="recepies">
+  <section id="recipes">
     <h2>Inspiration</h2>
+    <div class="recipe-filter">
+      <a href="#" class="btn btn_primary">Breakfast</a>
+      <a href="#" class="btn btn_primary">Beverages</a>
+      <a href="#" class="btn btn_primary">Main</a>
+      <a href="#" class="btn btn_primary">Dessert</a>
+      <a href="#" class="btn btn_primary">Appetizers</a>
+    </div>
     <div class="grid-category">
       <a href="#" id="">
         <span class="card">
@@ -73,7 +103,16 @@
     </div>
   </section>
   <section id="map"></section>
-  <footer></footer>
+  <footer>
+    <div class="contact">
+      <a href="mailto:zerowaist@farmfair.com"></a>
+    </div>
+    <div class="links">
+      <a href="#">Terms of Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </footer>
 
 
   <!-- Add your site or application content here -->
