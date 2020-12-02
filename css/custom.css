@@ -78,11 +78,12 @@ Global styles - Buttons
 
 .btn_primary {
   background: #f29722;
-  color: #fdfdfd;
+  color: #212121;
 }
 
 .btn_primary:hover {
   background: #9c8e61;
+  color: #fdfdfd;
 }
 
 .dark{
@@ -290,6 +291,7 @@ Global styles - Colors
     display: grid;
     grid-template-columns: repeat(3, 250px);
     gap: 2em;
+    justify-content: center;
 }
 
 #store img{
@@ -321,21 +323,38 @@ Global styles - Colors
     border-radius: 0 0 20px 20px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
 }
 
 .addToBasket h3{
-    grid-column-start: span 4;
+    grid-column-start: span 6;
     padding-top: 15px;
     margin: 0 0 -20px 0;
 }
 
+.stk {
+    grid-column: 2/4;
+    grid-row-start: 2;
+    align-self: start;
+    justify-self: start;
+    color: #212121;
+    font-weight: bolder;
+}
+
+.kr{
+    grid-column: 2/4;
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: start;
+    color: #212121;
+    font-weight: normal;
+}
+
 .addToBasket .quantity{
-    grid-column: 2/3;
-    justify-content: center;
+    grid-column: 4/5;
     padding: 3px;
-    margin: 25px 0 20px 0;
+    margin: 0 0 20px 0;
     border-radius: 10px 0 0 10px;
     text-align: right;
 }
@@ -345,16 +364,34 @@ Global styles - Colors
     border-radius: 0 10px 10px 0;
     padding: 6px;
     text-align: right;
-    margin: 25px 0 20px 0;
+    margin: 0 0 20px 0;
     border: none;
     color: #fdfdfd;
     background-color: #9c8e61;
+    grid-column: 5/6;
 }
 
 .addToBasket input[type=number]{
     border: none;
 }
 
+/*Aside on store page*/
+#store aside{
+    width: 250px;
+}
+
+aside li a{
+    display: block;
+    width: 100%;
+}
+
+aside li{
+    margin-bottom: 5px;
+}
+
+#store .btn_primary{
+    border-radius: 0 20px 20px 0;
+}
 
 /*Footer*/
 footer{
