@@ -120,7 +120,7 @@ Global styles - Colors
 #hero{
   position: relative;
     background:  #9c8e61;
-    height: 100vh;
+    height: 90vh;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -156,11 +156,13 @@ Global styles - Colors
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -80%);
 }
 
 #hero .pageHeading {
   z-index: 500;
+  margin-top: -10vh;
+  text-align: center;
 }
 
 #hero .logo{
@@ -170,7 +172,7 @@ Global styles - Colors
 }
 
 .gradSectionSolid {
-  height: 12rem;
+  height: 8rem;
   background: #212121;
 }
 
@@ -183,7 +185,7 @@ Global styles - Colors
 #categories{
     display: grid;
     justify-content: center;
-    margin-top: -136px;
+    margin-top: -20vh;
     position: relative;
     z-index: 1500;
 }
