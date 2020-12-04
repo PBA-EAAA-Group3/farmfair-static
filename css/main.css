@@ -82,6 +82,11 @@ video {
   vertical-align: middle;
 }
 
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
 /*
  * Remove default fieldset styles.
  */
