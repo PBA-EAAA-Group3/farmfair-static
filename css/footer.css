@@ -1,21 +1,18 @@
 /*Footer*/
-footer{
 
-
-}
 
 footer .contact{
     text-align: center;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     background: #fdfdfd;
     font-weight: 500;
     letter-spacing: 0.14rem;
 }
 
 footer .links{
-    display: block;
+    display: grid;
     background: #212121;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     color: #fdfdfd;
     font-size: 	0.8125rem;
     letter-spacing: 0.14rem;
@@ -25,6 +22,5 @@ footer .links{
 
 footer .links a {
     margin-bottom: 1rem;
-    display: block;
     text-align: center;
 }
