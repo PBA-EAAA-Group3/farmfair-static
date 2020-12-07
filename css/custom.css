@@ -354,6 +354,12 @@ border-radius: 20px;
     padding: 4rem 2rem;
 }
 
+#story .drawing{
+    display: block;
+    margin: 72px auto;
+    width: 80%;
+}
+
 #story h2{
     text-align: center;
 }
@@ -372,7 +378,6 @@ border-radius: 20px;
 .readMore .label{
     display: block;
     text-align: center;
-    margin: 0px auto -40px auto !important;
     text-transform: uppercase;
 }
 
