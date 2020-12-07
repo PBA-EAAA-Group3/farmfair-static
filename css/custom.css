@@ -101,6 +101,9 @@ Global styles - Buttons
 
 .downArrow{
     color: #212121;
+    display: block;
+    text-align: center;
+    font-size: xxx-large;
 }
 
 /*
@@ -356,6 +359,13 @@ border-radius: 20px;
     max-width: 500px;
     margin: 48px auto;
     display: block
+}
+
+.readMore .label{
+    display: block;
+    text-align: center;
+    margin: 0px auto -40px auto !important;
+    text-transform: uppercase;
 }
 
 
