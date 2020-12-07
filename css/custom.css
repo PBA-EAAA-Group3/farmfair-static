@@ -18,6 +18,10 @@ a{
     color: #f29722;
 }
 
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
 /*
 Global styles - Typography
 */
@@ -95,6 +99,9 @@ Global styles - Buttons
     color: #212121 !important;
 }
 
+.downArrow{
+    color: #212121;
+}
 
 /*
 Global styles - Colors
@@ -353,7 +360,7 @@ border-radius: 20px;
 
 
 #recipes {
-  background-color: : #fdfdfd;
+  background-color: #fdfdfd;
   background-image: url('../img/eggsbg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -519,6 +526,73 @@ aside li{
 #store .btn_primary{
     border-radius: 0 20px 20px 0;
 }
+
+/*Checkout page*/
+.checkoutContainer{
+    max-width: 812px;
+    margin: 0 auto;
+}
+#checkoutForm{
+    margin: 4rem 0;
+}
+
+#checkoutForm .billingAddress{
+    width: 500px;
+    padding-right: 100px;
+}
+
+#checkoutForm .payment{
+    width: 500px;
+    margin-top: 72px;
+    padding-right: 100px;
+}
+
+.checkoutBox{
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.cartContainer{
+    background: #f29722;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    align-self: center;
+    margin-top: 50px;
+}
+
+.cartContainer a{
+    color: #212121;
+}
+
+.cartContainer p{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.billingCart hr{
+    border-top-color: #212121;
+}
+
+.billingAddress h3{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.payment h3{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.payment .btn{
+    display: block;
+    margin: 0 auto;
+}
+  
 
 /*Footer*/
 footer{
