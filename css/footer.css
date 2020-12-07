@@ -23,7 +23,8 @@ footer .links{
 
 }
 
-footer .links a{
-  margin-bottom: 1rem;
-
+footer .links a {
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
 }
