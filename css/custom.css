@@ -234,7 +234,8 @@ margin-right: -10px;
   height: 100%;
   width: 100%;
   background: rgba(156, 142, 97, 0.45);
-  background: linear-gradient(180deg, rgba(156,142,97,0.45) 45%, rgba(33,33,33,1) 100%);
+  background: linear-gradient( rgba(33,33,33,0.5), rgba(33,33,33,0.5));
+  /*background: linear-gradient(180deg, rgba(156,142,97,0.45) 45%, rgba(33,33,33,1) 100%);*/
 }
 
 
@@ -252,6 +253,7 @@ margin-right: -10px;
   z-index: 500;
   margin-top: -10vh;
   text-align: center;
+  color: #fdfdfd;
 }
 
 #hero .logo{
@@ -449,7 +451,7 @@ border-radius: 20px;
 /*store page*/
 #store{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 224px 1fr;
     position: relative;
     z-index: 1500;
 }
@@ -458,7 +460,7 @@ border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3, 250px);
     gap: 2em;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #store img{
@@ -544,7 +546,7 @@ border-radius: 20px;
 
 /*Aside on store page*/
 #store aside{
-    width: 250px;
+  margin-right: 2rem;
 }
 
 aside li a{
@@ -557,5 +559,6 @@ aside li{
 }
 
 #store .btn_primary{
-    border-radius: 0 20px 20px 0;
+  padding: 24px 48px;
+    border-radius: 0 16px 16px 0;
 }
