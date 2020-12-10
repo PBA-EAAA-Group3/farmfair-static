@@ -7,7 +7,6 @@ Importing styles
 @import 'checkout.css';
 @import 'normalize.css';
 @import 'responsive.css';
-@import 'responsive.css';
 @import 'feather.css';
 
 
@@ -40,7 +39,7 @@ Global styles - spacing
 }
 
 section {
-  padding-bottom: 5rem;
+  padding-bottom: 15vh;
 }
 
 /*
@@ -55,6 +54,10 @@ h1, h2, h3{
 
 h1{
     font-size: 5.75rem;
+}
+
+h1.big {
+  font-size: 12rem;
 }
 
 h2{
@@ -471,11 +474,18 @@ border-radius: 20px;
     z-index: 1500;
 }
 
+.storeHero{
+
+    background: url('../img/vegetables.jpg') no-repeat !important;
+    background-size: cover !important;
+}
+
 #store-grid{
     display: grid;
     grid-template-columns:250px;
     gap: 2em;
     justify-content: space-evenly;
+    margin-top: -120px;
 }
 
 #store img{
@@ -575,7 +585,7 @@ aside li{
 
 #store .btn_primary{
   padding: 24px 48px;
-    border-radius: 0 16px 16px 0;
+  border-radius: 0 16px 16px 0;
 }
 
 
@@ -587,7 +597,7 @@ call to action
 section#cta {
   background-position: center bottom;
   background-size: cover;
-  padding: 10vh 0;
+  padding: 25vh 0;
 }
 
 .cta1 {
@@ -601,12 +611,13 @@ section#cta {
 
 #cta .text {
   text-align: left;
+  padding-bottom: 10vh;
   color: #fdfdfd;
 }
 
 #cta h2 {
   text-align: left;
-  color: ;
+  line-height: 1;
 }
 
 .signUpBox {
