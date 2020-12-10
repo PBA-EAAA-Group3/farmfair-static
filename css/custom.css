@@ -7,6 +7,9 @@ Importing styles
 @import 'checkout.css';
 @import 'normalize.css';
 @import 'responsive.css';
+@import 'responsive.css';
+@import 'feather.css';
+
 
 /*
 Global styles - spacing
@@ -21,16 +24,25 @@ Global styles - spacing
   padding: 0 1.5rem;
 }
 
-a{
-    text-decoration: none;
-    transition: 0.5 all-ease;
-    color: #f29722;
+
+.grid {
+  display: grid;
 }
+
 
 .flex{
     display: flex;
     justify-content: space-between;
 }
+
+.space-bottom {
+  padding-bottom: 6.25rem;
+}
+
+section {
+  padding-bottom: 5rem;
+}
+
 /*
 Global styles - Typography
 */
@@ -74,6 +86,11 @@ p{
 
 .label{
     font-size: .8rem !important;
+}
+
+a{
+    text-decoration: none;
+    color: #f29722;
 }
 
 
@@ -144,7 +161,6 @@ Global styles - Colors
 /*
 Global styles - spacing
 */
-
 
 
 /*
@@ -450,15 +466,14 @@ border-radius: 20px;
 
 /*store page*/
 #store{
-    display: grid;
-    grid-template-columns: 224px 1fr;
+
     position: relative;
     z-index: 1500;
 }
 
 #store-grid{
     display: grid;
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns:250px;
     gap: 2em;
     justify-content: space-evenly;
 }
@@ -546,7 +561,7 @@ border-radius: 20px;
 
 /*Aside on store page*/
 #store aside{
-  margin-right: 2rem;
+  display: none;
 }
 
 aside li a{
@@ -561,4 +576,120 @@ aside li{
 #store .btn_primary{
   padding: 24px 48px;
     border-radius: 0 16px 16px 0;
+}
+
+
+
+/*
+call to action
+*/
+
+section#cta {
+  background-position: center bottom;
+  background-size: cover;
+  padding: 10vh 0;
+}
+
+.cta1 {
+  background: url('../img/field.jpg') no-repeat;
+}
+
+#cta .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#cta .text {
+  text-align: left;
+  color: #fdfdfd;
+}
+
+#cta h2 {
+  text-align: left;
+  color: ;
+}
+
+.signUpBox {
+background: #fdfdfd;
+border-radius: 20px;
+padding: 2rem;
+max-width: 360px;
+min-width: 250px;
+}
+
+.signUpBox h3 {
+  margin-bottom: 5vh;
+}
+
+.signUpBox input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #9c8e61;
+  padding-bottom: 5px;
+  margin-bottom: 2.5vh;
+}
+
+.signUpBox .btn_cta {
+  color: #f29722;
+  background: none;
+  border: none;
+  margin-top: 5vh;
+}
+
+
+/*
+Basket page
+*/
+
+
+
+.basketGrid {
+  display: grid;
+  grid-template-columns: 1fr minmax(70px, 100px) minmax(70px, 100px) 1fr;
+  grid-template-rows: 50px;
+  background: #fdfdfd;
+  border-radius: 20px;
+  padding: 10.75vh 3rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.basketGrid .basketItem {
+border-bottom: 1px solid #ededed;
+}
+
+.basketItemForm .quantity {
+    width: 72px;
+    padding: 3px;
+    margin: 0 12px 20px 0;
+    border: 1px solid #d7a56a;
+    border-radius: 10px 0 0 10px;
+    text-align: right;
+    margin-right: 12px;
+}
+
+.basketGrid button, .basketGrid select {
+  background-color: none;
+  border: none;
+}
+
+.basketGrid i::selection, .basketGrid button {
+  background: none;
+}
+
+.basketGrid i {
+  font-size: 1.2rem;
+}
+
+.basketGrid .basketRemove i {
+  font-size: 0.8rem;
+  margin-left: 24px;
+}
+
+.basketGrid .basketButtons {
+  margin-top: 5vh;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-content: flex-start;
 }

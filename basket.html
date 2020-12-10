@@ -16,8 +16,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/custom.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -33,44 +32,90 @@
     </nav>
 
   </header>
+
   <h2>Basket</h2>
-  <div id="items">
-    <div class="basketHeading">
-        <div class="item"><p class="label">Item</p></div>
-        <div class="qty"><p class="label">Qty</p></div>
-        <div class="price"><p class="label">Price</p></div>
-        <div class="total"><p class="label">Total</p></div>
+
+  <div class="basketGrid container">
+    <div class="basketHeading"><strong>Item</strong></div>
+    <div class="basketHeading"><strong>Price</strong></div>
+    <div class="basketHeading"><strong>Subtotal</strong></div>
+    <div class="basketHeading"><strong>Quantity</strong></div>
+    <div class="basketItem">Cucumber</div>
+    <div class="basketItem">4.00</div>
+    <div class="basketItem">12.00</div>
+    <div class="basketItem flex">
+      <form class="basketItemForm" action="/Basket/UpdateBasket" method="post">
+          <input type="hidden" name="id" value="@item.ProductId" />
+          <input type="number" class="quantity" name="quantity" min="0" max="100" step="1" value="@item.Quantity" asp-action="Quantity" asp-route-id="@item.ProductId">
+          <button class="label" type="submit"><i class="sun feather-refresh-cw"></i></button>
+
+      </form>
+      <form class="basketRemove" action="/Basket/RemoveBasket" method="post">
+          <input type="hidden" name="id" value="@item.ProductId" />
+
+          <button class="label" type="submit"><i class="olive feather-x-circle"></i></button>
+
+      </form>
     </div>
-    <div class="basketBox">
-        <img src="" alt="">
-        <div class="selectQty"><div class="qtyNumber">2</div>
-        <div class="qtyUp"></div>
-        <div class="qtyDown"></div></div>
-        <div class="amount">20 Kr.</div>
-        <div class="totalAmount">40 kr.</div>
+
+    <div class="basketButtons flex">
+        <a href="#" class="btn btn-primary" asp-action="Index" asp-controller="Product">Continue shopping</a>
+        <a href="#" class="btn btn-primary" asp-action="Checkout" asp-controller="Order">
+            Checkout
+        </a>
     </div>
-    <div class="basketBox">
-        <img src="" alt="">
-        <div class="selectQty"><div class="qtyNumber">2</div>
-        <div class="qtyUp"></div>
-        <div class="qtyDown"></div></div>
-        <div class="amount">20 Kr.</div>
-        <div class="totalAmount">40 kr.</div>
-    </div>
-    <div class="basketBox">
-        <img src="" alt="">
-        <div class="selectQty"><div class="qtyNumber">2</div>
-        <div class="qtyUp"></div>
-        <div class="qtyDown"></div></div>
-        <div class="amount">20 Kr.</div>
-        <div class="totalAmount">40 kr.</div>
-    </div>
-    <div class="totalPrice">
-        <p class="label">Total</p>
-        <p class="label">40 kr.</p>
-    </div>
-    <button class="btn">Buy It</button>
-  </div>
+
+  </div><!--End basket summary-->
+
+  <table>
+
+    <tbody>
+
+        @foreach (var item in Model.Item3.Items)
+        {
+            var product = Model.Item2.Where(product => product.ProductModelId == item.ProductId).First();
+            <tr>
+                <td>
+                    @product.ProductName
+                </td>
+                <td>
+                    @product.Price
+                </td>
+                <td>
+                    @(item.Quantity*product.Price)
+                </td>
+                <td>
+                    <form class="addToBasket" action="/Basket/UpdateBasket" method="post">
+                        <input type="hidden" name="id" value="@item.ProductId" />
+                        <input type="number" class="quantity" name="quantity" min="0" max="100" step="1" value="@item.Quantity" asp-action="Quantity" asp-route-id="@item.ProductId">
+                        <button class="addButton label" type="submit">Update</button>
+
+                    </form>
+                    <form class="addToBasket" action="/Basket/RemoveBasket" method="post">
+                        <input type="hidden" name="id" value="@item.ProductId" />
+
+                        <button class="addButton label" type="submit">Remove</button>
+
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @Model.Item3.ComputeTotalValue(Model.Item2).ToString("c")
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    <a class="btn btn-primary" asp-action="Index" asp-controller="Product">Continue shopping</a>
+    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">
+        Checkout
+    </a>
+</div>
   <footer>
     <div class="contact">
       <a href="mailto:zerowaist@farmfair.com">zerowaist@farmfair.com</a>

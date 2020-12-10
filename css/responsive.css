@@ -3,6 +3,10 @@ large mobile
 */
 @media only screen and (min-width: 568px) {
 
+  /*
+  Global styles - spacing
+  */
+
   .container{
       margin: 0 auto;
       padding: 0 7.5rem;
@@ -12,10 +16,16 @@ large mobile
     padding: 0 4rem;
   }
 
+
+  /*
+  Global styles - Typography
+  */
+
   h2{
       font-size: 5.75rem;
       margin-bottom: 5rem;
   }
+
 
   .gradSectionSolid {
     height: 8rem;
@@ -58,12 +68,24 @@ Tablet
 @media only screen and (min-width: 768px) {
 
 
+  /*
+  Global styles - spacing
+  */
+
+
 
   #recipes .recipe-grid {
 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   }
+
+
+
+#store-grid {
+  grid-template-columns: repeat(2, 250px) !important;
+}
+
 
   /*Footer*/
 
@@ -79,7 +101,6 @@ Tablet
       margin-bottom: 1rem;
       text-align: right;
   }
-
 
 
 }
@@ -101,8 +122,24 @@ laptop
   }
 
 
-}
+  /*container*/
+  #cta .container {
+    grid-template-columns: 1fr 1fr;
+  }
 
+
+  #store {
+    display: grid;
+    grid-template-columns: 224px 1fr;
+  }
+
+  #store aside{
+    display: block !important;
+    margin-right: 2rem;
+  }
+
+
+}
 
 /*
 Large desktop
@@ -110,6 +147,8 @@ Large desktop
 @media only screen and (min-width: 1140px) {
 
 
-
+  #store-grid {
+    grid-template-columns: repeat(3, 250px) !important;
+  }
 
 }
